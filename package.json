@@ -1,0 +1,57 @@
+{
+  "name": "pocket-id-operator",
+  "version": "0.0.1",
+  "description": "Pocket ID Operator for Kubernetes",
+  "keywords": [
+    "pepr",
+    "k8s",
+    "policy-engine",
+    "pepr-module",
+    "security"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "pepr": {
+    "uuid": "pocket-id-operator",
+    "onError": "reject",
+    "webhookTimeout": 10,
+    "customLabels": {
+      "namespace": {
+        "pepr.dev": ""
+      }
+    },
+    "alwaysIgnore": {
+      "namespaces": []
+    },
+    "admission": {
+      "alwaysIgnore": {
+        "namespaces": []
+      }
+    },
+    "watch": {
+      "alwaysIgnore": {
+        "namespaces": []
+      }
+    },
+    "includedFiles": [],
+    "env": {}
+  },
+  "scripts": {
+    "k3d-setup": "k3d cluster delete pepr-dev && k3d cluster create pepr-dev --k3s-arg '--debug@server:0' --wait && kubectl rollout status deployment -n kube-system"
+  },
+  "dependencies": {
+    "pepr": "1.0.4",
+    "undici": "^7.0.1"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "^12.1.0",
+    "@openapitools/openapi-generator-cli": "^2.27.0",
+    "openapi-schema-to-json-schema": "^2.2.0",
+    "openapi-typescript-codegen": "^0.30.0",
+    "typescript": "5.8.3"
+  },
+  "overrides": {
+    "brace-expansion": "1.1.11"
+  }
+}
