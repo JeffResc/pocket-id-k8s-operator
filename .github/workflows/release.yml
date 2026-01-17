@@ -69,4 +69,4 @@ jobs:
         run: |
           VERSION="${{ github.event.release.tag_name }}"
           VERSION="${VERSION#v}"
-          helm push pocket-id-operator-${VERSION}.tgz oci://ghcr.io/${{ github.repository_owner }}
+          helm push pocket-id-operator-${VERSION}.tgz oci://ghcr.io/${{ github.repository }}
