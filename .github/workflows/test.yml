@@ -17,7 +17,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repo
+        uses: actions/checkout@v6
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -25,21 +26,22 @@ jobs:
       - name: Install swag
         run: go install github.com/swaggo/swag/cmd/swag@latest
 
-      - uses: actions/checkout@v6
+      - name: Checkout PocketID repo
+        uses: actions/checkout@v6
         with:
           repository: 'pocket-id/pocket-id'
           ref: 'v2.2.0'
           path: 'pocket-id'
 
       - name: Generate swagger.json
+        working-directory: pocket-id/backend
         run: |
-          cd pocket-id/backend
-          swag init -d ./internal,./internal/dto -g ../cmd/main.go -ot json -o ../../static -md ../../static
-        
+          mkdir -p ../../dist
+          echo "Pocket ID API" > ../../dist/api.md
+          swag init -d ./internal,./internal/dto -g ../cmd/main.go -ot json -o ../../dist -md ../../dist
+
       - name: Generate PocketID client
         run: |
-          mkdir dist
-          mv pocket-id/backend/swagger.json dist/swagger.json
           npm i -D openapi-typescript-codegen
           npx openapi \
             --input dist/swagger.json \
