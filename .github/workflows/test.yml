@@ -51,7 +51,7 @@ jobs:
           pnpm install
           pnpm exec openapi \
             --input generated/swagger.json \
-            --output ./dist/pocketid-client \
+            --output ./generated/pocketid-client \
             --client fetch
 
       - name: Build Pepr module

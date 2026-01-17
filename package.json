@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@kubernetes/client-node": "^1.4.0",
-    "kubernetes-fluent-client": "^3.10.12",
+    "kubernetes-fluent-client": "3.10.11",
     "pepr": "1.0.4",
     "undici": "^7.0.1"
   },

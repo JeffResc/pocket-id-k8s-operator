@@ -7,8 +7,8 @@ import {
   Condition,
   SecretTemplate,
 } from "../crd/pocketidclient";
-import { OidcService, OpenAPI } from "../dist/pocketid-client";
-import type { dto_OidcClientCreateDto } from "../dist/pocketid-client";
+import { OidcService, OpenAPI } from "../generated/pocketid-client";
+import type { dto_OidcClientCreateDto } from "../generated/pocketid-client";
 
 export const PocketIDClientCapability = new Capability({
   name: "pocket-id-client",
