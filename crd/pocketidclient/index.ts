@@ -5,7 +5,7 @@ import {
 } from "@kubernetes/client-node";
 import { GenericKind, RegisterKind } from "kubernetes-fluent-client";
 import swagger from "../../generated/swagger.json";
-import type { dto_OidcClientCreateDto } from "../../dist/pocketid-client";
+import type { dto_OidcClientCreateDto } from "../../generated/pocketid-client";
 
 // Resolve $ref references in the swagger schema for Kubernetes CRD compatibility
 function resolveRefs(
