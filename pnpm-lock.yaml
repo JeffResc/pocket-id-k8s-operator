@@ -32,7 +32,10 @@ importers:
         version: 9.39.2
       '@openapitools/openapi-generator-cli':
         specifier: ^2.27.0
-        version: 2.27.0(@types/node@25.0.8)
+        version: 2.27.0(@types/node@20.19.30)
+      '@types/node':
+        specifier: ^20.19.30
+        version: 20.19.30
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.45.0
         version: 8.45.0(@typescript-eslint/parser@8.45.0(eslint@9.36.0)(typescript@5.8.3))(eslint@9.36.0)(typescript@5.8.3)
@@ -431,6 +434,9 @@ packages:
 
   '@types/node-fetch@2.6.13':
     resolution: {integrity: sha512-QGpRVpzSaUs30JBSGPjOg4Uveu384erbHBoT1zeONvyCfwQxIkUshLAOqN/k9EjGviPRmWTTe6aH2qySWKTVSw==}
+
+  '@types/node@20.19.30':
+    resolution: {integrity: sha512-WJtwWJu7UdlvzEAUm484QNg5eAoq5QR08KDNx7g45Usrs2NtOPiX8ugDqmKdXkyL03rBqU5dYNYVQetEpBHq2g==}
 
   '@types/node@24.10.8':
     resolution: {integrity: sha512-r0bBaXu5Swb05doFYO2kTWHMovJnNVbCsII0fhesM8bNRlLhXIuckley4a2DaD+vOdmm5G+zGkQZAPZsF80+YQ==}
@@ -1996,6 +2002,9 @@ packages:
     resolution: {integrity: sha512-rvKSBiC5zqCCiDZ9kAOszZcDvdAHwwIKJG33Ykj43OKcWsnmcBRL09YTU4nOeHZ8Y2a7l1MgTd08SBe9A8Qj6A==}
     engines: {node: '>=18'}
 
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
@@ -2276,12 +2285,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@inquirer/external-editor@1.0.3(@types/node@25.0.8)':
+  '@inquirer/external-editor@1.0.3(@types/node@20.19.30)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.2
     optionalDependencies:
-      '@types/node': 25.0.8
+      '@types/node': 20.19.30
 
   '@isaacs/balanced-match@4.0.1': {}
 
@@ -2380,7 +2389,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@openapitools/openapi-generator-cli@2.27.0(@types/node@25.0.8)':
+  '@openapitools/openapi-generator-cli@2.27.0(@types/node@20.19.30)':
     dependencies:
       '@nestjs/axios': 4.0.1(@nestjs/common@11.1.11(reflect-metadata@0.2.2)(rxjs@7.8.2))(axios@1.13.2)(rxjs@7.8.2)
       '@nestjs/common': 11.1.11(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -2394,7 +2403,7 @@ snapshots:
       console.table: 0.10.0
       fs-extra: 11.3.3
       glob: 13.0.0
-      inquirer: 8.2.7(@types/node@25.0.8)
+      inquirer: 8.2.7(@types/node@20.19.30)
       proxy-agent: 6.5.0
       reflect-metadata: 0.2.2
       rxjs: 7.8.2
@@ -2439,8 +2448,12 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 25.0.8
+      '@types/node': 20.19.30
       form-data: 4.0.5
+
+  '@types/node@20.19.30':
+    dependencies:
+      undici-types: 6.21.0
 
   '@types/node@24.10.8':
     dependencies:
@@ -2461,7 +2474,7 @@ snapshots:
 
   '@types/stream-buffers@3.0.8':
     dependencies:
-      '@types/node': 25.0.8
+      '@types/node': 20.19.30
 
   '@typescript-eslint/eslint-plugin@8.45.0(@typescript-eslint/parser@8.45.0(eslint@9.36.0)(typescript@5.8.3))(eslint@9.36.0)(typescript@5.8.3)':
     dependencies:
@@ -3318,9 +3331,9 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer@8.2.7(@types/node@25.0.8):
+  inquirer@8.2.7(@types/node@20.19.30):
     dependencies:
-      '@inquirer/external-editor': 1.0.3(@types/node@25.0.8)
+      '@inquirer/external-editor': 1.0.3(@types/node@20.19.30)
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-cursor: 3.1.0
@@ -4174,6 +4187,8 @@ snapshots:
       '@lukeed/csprng': 1.1.0
 
   uint8array-extras@1.5.0: {}
+
+  undici-types@6.21.0: {}
 
   undici-types@7.16.0: {}
 

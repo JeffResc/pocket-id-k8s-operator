@@ -52,6 +52,7 @@
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@openapitools/openapi-generator-cli": "^2.27.0",
+    "@types/node": "^20.19.30",
     "@typescript-eslint/eslint-plugin": "^8.45.0",
     "@typescript-eslint/parser": "^8.45.0",
     "eslint": "^9.36.0",
