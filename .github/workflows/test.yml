@@ -40,6 +40,9 @@ jobs:
           echo "Pocket ID API" > ../../dist/api.md
           swag init -d ./internal,./internal/dto -g ../cmd/main.go -ot json -o ../../dist -md ../../dist
 
+      - name: Cleanup PocketID repo
+        run: rm -rf pocket-id
+
       - name: Generate PocketID client
         run: |
           npm i --include=dev
