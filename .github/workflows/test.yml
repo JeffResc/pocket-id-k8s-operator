@@ -36,9 +36,9 @@ jobs:
       - name: Generate swagger.json
         working-directory: pocket-id/backend
         run: |
-          mkdir -p ../../dist
-          echo "Pocket ID API" > ../../dist/api.md
-          swag init -d ./internal,./internal/dto -g ../cmd/main.go -ot json -o ../../dist -md ../../dist
+          mkdir -p ../../generated
+          echo "Pocket ID API" > ../../generated/api.md
+          swag init -d ./internal,./internal/dto -g ../cmd/main.go -ot json -o ../../generated -md ../../generated
 
       - name: Cleanup PocketID repo
         run: rm -rf pocket-id
@@ -47,7 +47,7 @@ jobs:
         run: |
           npm i --include=dev
           npx openapi \
-            --input dist/swagger.json \
+            --input generated/swagger.json \
             --output ./dist/pocketid-client \
             --client fetch
 
