@@ -5,3 +5,6 @@ insecure*
 
 # Generated pocket-id client
 generated/
+
+# Pocket ID source checkout (used during build)
+pocket-id/
