@@ -42,12 +42,17 @@
     "k3d-setup": "k3d cluster delete pepr-dev && k3d cluster create pepr-dev --k3s-arg '--debug@server:0' --wait && kubectl rollout status deployment -n kube-system"
   },
   "dependencies": {
+    "@kubernetes/client-node": "^1.4.0",
+    "kubernetes-fluent-client": "^3.10.12",
     "pepr": "1.0.4",
     "undici": "^7.0.1"
   },
   "devDependencies": {
     "@apidevtools/swagger-parser": "^12.1.0",
     "@openapitools/openapi-generator-cli": "^2.27.0",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint": "^9.39.2",
     "openapi-schema-to-json-schema": "^2.2.0",
     "openapi-typescript-codegen": "^0.30.0",
     "typescript": "5.8.3"
