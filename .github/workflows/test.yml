@@ -42,7 +42,7 @@ jobs:
 
       - name: Generate PocketID client
         run: |
-          npm i -D openapi-typescript-codegen
+          npm i --include=dev
           npx openapi \
             --input dist/swagger.json \
             --output ./dist/pocketid-client \
