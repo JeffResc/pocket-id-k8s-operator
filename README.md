@@ -72,10 +72,10 @@ watcher:
         name: pocketid-credentials
 ```
 
-Then install:
+Then install (replace with latest version):
 
 ```bash
-helm install pocket-id-operator ./dist/pocket-id-operator-chart \
+helm install pocket-id-operator oci://ghcr.io/jeffresc/pocket-id-operator:0.1.0 \
   --namespace pepr-system \
   -f values-override.yaml
 ```
